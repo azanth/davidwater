@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="david.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+    <title>David Water</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <p class="text-center">Get 15% of your first order by signing up</p>
+        <h4 class="text-center">David Water No7</h4>
+    </div>
+
+    <nav class="navbar navbar-expand-sm bg-light navbar-light  sticky-top justify-content-center">
+
+        <a class="navbar-brand" href="#">
+            <img src="logo.png" alt="logo" style="width:150px;">
+        </a>
+
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Buy</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <video class="video-fluid z-depth-1" autoplay loop controls muted>
+        <source src="header.mp4" type="video/mp4" />
+    </video>
+
+
+    <div class="box">
+        <h2 class="text1">Dream you way to succes</h2>
+        <h2 class="text2">Drop of freshness</h2>
+        <h2 class="text3">Sacred beauty from withnin</h2>
+        <img src="product.png" alt="produkter" class="logo">
+    </div>
+
+
+
+    <script>
+        gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".box",
+                    start: "center center",
+                    end: "bottom top",
+                    scrub: 1,
+                    pin: true
+                }
+            })
+            .from(".text1", {
+                x: innerWidth * 1
+            })
+            .from(".text2", {
+                x: innerWidth * -1
+            })
+            .from(".text3", {
+                x: innerWidth * 1
+            })
+            .from(".logo", {
+                y: innerHeight * 1,
+                rotate: 360
+            })
+
+    </script>
+
+    <div class="jumbotron text-center">
+        <h1>About us</h1>
+        <p>David water is not just, its water thats infused with a marble crystal. Crystals have energy which can tranfer to you. Magnify your inner strenght. Staying hydrated and charged.David water cares about the enviroment, and to help the climate the use plastic bottles need to be minimized. Our bottles are made of recycled materials and is reusable.Stay hydrated and make a change for yourself and our world.</p>
+
+
+        <p> David water mission “Get hydrated and manifeste your dreams”</p>
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="column" style="background-color:white;">
+            <img src="4.png" alt="lemon" style="width:100px;height:100px;">
+            <h2>Lemon Drops</h2>
+            <p>The taste of refreshing lemons with mineral water thats infused with citrin crystal. This crystal will give you strenght and the succes to achieve your goals.</p>
+        </div>
+        <div class="column" style="background-color:white;">
+            <img src="5.png" alt="coconut" style="width:100px;height:100px;">
+            <h2>Coconut Dream</h2>
+            <p>The taste of tropical and exotic coconut. Is infused with the marble crystal which can give sel-control and inner peace.</p>
+        </div>
+        <div class="column" style="background-color:white;">
+
+            <img src="6.png" alt="rose" style="width:100px;height:100px;">
+            <h2>Sacred Rose</h2>
+            <p>A hint of roses, to heal your body from within. Sacred Rose has a rose quartz crystal for love and healing abd balance.</p>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="water.png" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="crystal.png" style="width:100%">
+
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="help.png" style="width:100%">
+
+        </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+    </script>
+
+
+    <div class='embedsocial-instagram' data-ref="77074e68da1118ffba7ff65dd2f8f40e6bab619f"></div>
+    <script>
+        (function(d, s, id) {
+            var js;
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://embedsocial.com/embedscript/in.js";
+            d.getElementsByTagName("head")[0].appendChild(js);
+        }(document, "script", "EmbedSocialInstagramScript"));
+
+    </script>
+
+    <div class="wrap" data-pos="0">
+        <div class="wrap-clip"></div>
+        <div class="content">
+            <div class="top">
+
+
+            </div>
+            <div class="bar">
+                <div class="cart">
+                    <i class="zmdi zmdi-shopping-cart"></i>
+                    <div class="badge"><span>0</span></div>
+                </div>
+                <a href="javascript:void(0)">
+                    <img src="drop.png" alt="lemon drop">
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="rose.png" alt="sacred rose">
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="dream.png" alt="coconut dream">
+                </a>
+            </div>
+            <div class="products">
+                <div class="products-wrap">
+                    <div class="item">
+                        <div class="title">Lemon</div>
+                        <div class="image">
+                            <img src="drop.png" class="shoe">
+                        </div>
+                        <div class="info">
+                            <h2>Lemon Drop</h2>
+                            <h3>35 kr </h3>
+                            <p>The taste of refreshing lemons with mineral water thats infused with citrin crystal. This crystal will give you strenght and the succes to achieve your goals.</p>
+                            <button class="btn" type="button">
+                                <span><i class="zmdi zmdi-shopping-cart-plus"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="title">Rose </div>
+                        <div class="image">
+                            <img src="rose.png" class="shoe">
+                        </div>
+                        <div class="info">
+                            <h2>Sacred Rose</h2>
+                            <h3>35 kr</h3>
+                            <p>A hint of roses, to heal your body from within. Sacred Rose has a rose quartz crystal for love and healing abd balance</p>
+                            <button class="btn" type="button">
+                                <span><i class="zmdi zmdi-shopping-cart-plus"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="title">Coconut</div>
+                        <div class="image">
+                            <img src="dream.png" class="shoe">
+                        </div>
+                        <div class="info">
+                            <h2>Coconut Dream</h2>
+                            <h3>35 kr</h3>
+                            <p>The taste of tropical and exotic coconut. Is infused with the marble crystal which can give sel-control and inner peace.</p>
+                            <button class="btn" type="button">
+                                <span><i class="zmdi zmdi-shopping-cart-plus"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let $wrap = document.querySelector('.wrap'),
+            $opts = document.querySelectorAll('.bar a');
+
+        Array.prototype.forEach.call($opts, (el, i) => {
+            el.addEventListener('click', function(event) {
+                $wrap.setAttribute('data-pos', i);
+            });
+        });
+
+        let count = 0,
+            $btns = document.querySelectorAll('.btn'),
+            $cart = document.querySelector('.cart');
+
+        Array.prototype.forEach.call($btns, (el, i) => {
+            el.addEventListener('click', function(event) {
+                $cart.classList.add('add');
+                $cart.querySelector('span').innerText = ++count;
+                setTimeout(() => {
+                    $cart.classList.remove('add');
+                }, 1500);
+            });
+        });
+
+    </script>
+
+
+
+    <div class="footer_responsive">
+        <div class="footer">
+
+            <div class="footer_wrapper">
+                <div class="footer_contact">
+                    <h3>Contact Us</h3>
+                    <p>ajet0002@stud.kea.dk<br>
+                        60182384
+                    </p>
+                </div>
+
+
+                <div class="footer_adresse">
+                    <h3>Address</h3>
+                    <p>Kea Lygten 16<br>
+                        2200 København N<br>
+                        Denmark</p>
+                </div>
+
+
+                <div class="follow_us">
+                    <h3>Follow us</h3>
+                </div>
+                <div class="footer_so_me">
+                    <a href="https://www.facebook.com/houseofdaviid2020/" target="blank">
+                        <img src="facebook.png" alt="Instagram Button" class="footer_fb_logo">
+                    </a>
+                    <a href="https://www.instagram.com/davidwaterno7/?hl=da" target="_blank">
+                        <img src="instagram.png" alt="Instagram Button" class="footer_insta_logo">
+                    </a>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--javascript-->
+    <script>
+        function myFunction(x) {
+
+            /*Hamburger menu animation to x*/
+            x.classList.toggle("change");
+            /*Hiding and showing the dropdown menu */
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        function scrollWin() {
+            /* scrolling down smooth*/
+            window.scrollTo({
+                top: 550,
+                behavior: "smooth"
+            });
+        }
+
+    </script>
+
+</body>
